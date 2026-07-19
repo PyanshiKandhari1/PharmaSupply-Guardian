@@ -1,0 +1,2636 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0603.1643                               -->
+<workbook original-version='18.1' source-build='2026.2.0 (20262.26.0603.1643)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Book1_17844707122710' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='final_inventory' inline='true' name='federated.0jew25b1nxghkk14nn0b513s5hsm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='final_inventory' name='textscan.0ryndlc0z3i8dt17kmc0b0hd3otd'>
+            <connection class='textscan' directory='/Users/mani/Desktop/PharmaSupplyGuardian:/outputs' filename='final_inventory.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ryndlc0z3i8dt17kmc0b0hd3otd' name='final_inventory.csv' table='[final_inventory#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='SKU_ID' ordinal='0' />
+            <column datatype='string' name='SKU_Name' ordinal='1' />
+            <column datatype='string' name='Category' ordinal='2' />
+            <column datatype='string' name='ABC_Class' ordinal='3' />
+            <column datatype='string' name='Supplier_ID' ordinal='4' />
+            <column datatype='string' name='Supplier_Name' ordinal='5' />
+            <column datatype='string' name='Warehouse_ID' ordinal='6' />
+            <column datatype='string' name='Warehouse_Location' ordinal='7' />
+            <column datatype='string' name='Batch_ID' ordinal='8' />
+            <column datatype='date' name='Received_Date' ordinal='9' />
+            <column datatype='date' name='Last_Purchase_Date' ordinal='10' />
+            <column datatype='date' name='Expiry_Date' ordinal='11' />
+            <column datatype='integer' name='Stock_Age_Days' ordinal='12' />
+            <column datatype='integer' name='Quantity_On_Hand' ordinal='13' />
+            <column datatype='integer' name='Quantity_Reserved' ordinal='14' />
+            <column datatype='integer' name='Quantity_Committed' ordinal='15' />
+            <column datatype='integer' name='Damaged_Qty' ordinal='16' />
+            <column datatype='integer' name='Returns_Qty' ordinal='17' />
+            <column datatype='string' name='Avg_Daily_Sales' ordinal='18' />
+            <column datatype='real' name='Forecast_Next_30d' ordinal='19' />
+            <column datatype='string' name='Days_of_Inventory' ordinal='20' />
+            <column datatype='real' name='Reorder_Point' ordinal='21' />
+            <column datatype='integer' name='Safety_Stock' ordinal='22' />
+            <column datatype='integer' name='Lead_Time_Days' ordinal='23' />
+            <column datatype='real' name='Unit_Cost_USD' ordinal='24' />
+            <column datatype='real' name='Last_Purchase_Price_USD' ordinal='25' />
+            <column datatype='real' name='Total_Inventory_Value_USD' ordinal='26' />
+            <column datatype='string' name='SKU_Churn_Rate' ordinal='27' />
+            <column datatype='string' name='Order_Frequency_per_month' ordinal='28' />
+            <column datatype='real' name='Supplier_OnTime_Pct' ordinal='29' />
+            <column datatype='string' name='FIFO_FEFO' ordinal='30' />
+            <column datatype='string' name='Inventory_Status' ordinal='31' />
+            <column datatype='integer' name='Count_Variance' ordinal='32' />
+            <column datatype='date' name='Audit_Date' ordinal='33' />
+            <column datatype='real' name='Audit_Variance_Pct' ordinal='34' />
+            <column datatype='real' name='Demand_Forecast_Accuracy_Pct' ordinal='35' />
+            <column datatype='string' name='Notes' ordinal='36' />
+            <column datatype='integer' name='Available_Stock' ordinal='37' />
+            <column datatype='integer' name='Days_to_Expiry' ordinal='38' />
+            <column datatype='boolean' name='Low_Stock_Flag' ordinal='39' />
+            <column datatype='string' name='Expiry_Risk' ordinal='40' />
+            <column datatype='integer' name='Supply_Risk_Score' ordinal='41' />
+            <column datatype='string' name='Risk_Level' ordinal='42' />
+            <column datatype='string' name='Inventory_Health' ordinal='43' />
+            <column datatype='string' name='Supplier_Performance' ordinal='44' />
+            <column datatype='string' name='Expiry_Status' ordinal='45' />
+            <column datatype='string' name='Stock_Status' ordinal='46' />
+            <column datatype='string' name='Inventory_Value_Category' ordinal='47' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SKU_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SKU_ID]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>SKU_ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SKU_Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SKU_Name]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>SKU_Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ABC_Class</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ABC_Class]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>ABC_Class</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supplier_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Supplier_ID]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Supplier_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supplier_Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Supplier_Name]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Supplier_Name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Warehouse_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Warehouse_ID]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Warehouse_ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Warehouse_Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Warehouse_Location]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Warehouse_Location</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Batch_ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Batch_ID]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Batch_ID</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Received_Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Received_Date]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Received_Date</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last_Purchase_Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Last_Purchase_Date]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Last_Purchase_Date</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Expiry_Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Expiry_Date]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Expiry_Date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock_Age_Days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Stock_Age_Days]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Stock_Age_Days</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity_On_Hand</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity_On_Hand]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Quantity_On_Hand</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity_Reserved</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity_Reserved]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Quantity_Reserved</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity_Committed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity_Committed]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Quantity_Committed</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Damaged_Qty</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Damaged_Qty]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Damaged_Qty</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Returns_Qty</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Returns_Qty]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Returns_Qty</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg_Daily_Sales</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Avg_Daily_Sales]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Avg_Daily_Sales</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Forecast_Next_30d</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Forecast_Next_30d]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Forecast_Next_30d</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days_of_Inventory</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Days_of_Inventory]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Days_of_Inventory</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Reorder_Point</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Reorder_Point]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Reorder_Point</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Safety_Stock</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Safety_Stock]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Safety_Stock</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lead_Time_Days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Lead_Time_Days]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Lead_Time_Days</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit_Cost_USD</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Unit_Cost_USD]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Unit_Cost_USD</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last_Purchase_Price_USD</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Last_Purchase_Price_USD]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Last_Purchase_Price_USD</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total_Inventory_Value_USD</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total_Inventory_Value_USD]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Total_Inventory_Value_USD</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SKU_Churn_Rate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SKU_Churn_Rate]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>SKU_Churn_Rate</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order_Frequency_per_month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Order_Frequency_per_month]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Order_Frequency_per_month</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supplier_OnTime_Pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Supplier_OnTime_Pct]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Supplier_OnTime_Pct</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FIFO_FEFO</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FIFO_FEFO]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>FIFO_FEFO</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Inventory_Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Inventory_Status]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Inventory_Status</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Count_Variance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Count_Variance]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Count_Variance</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Audit_Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Audit_Date]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Audit_Date</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Audit_Variance_Pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Audit_Variance_Pct]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Audit_Variance_Pct</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Demand_Forecast_Accuracy_Pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Demand_Forecast_Accuracy_Pct]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Demand_Forecast_Accuracy_Pct</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Notes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Notes]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Notes</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Available_Stock</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Available_Stock]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Available_Stock</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days_to_Expiry</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Days_to_Expiry]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Days_to_Expiry</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low_Stock_Flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[Low_Stock_Flag]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Low_Stock_Flag</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Expiry_Risk</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Expiry_Risk]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Expiry_Risk</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supply_Risk_Score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Supply_Risk_Score]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Supply_Risk_Score</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Risk_Level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Risk_Level]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Risk_Level</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Inventory_Health</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Inventory_Health]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Inventory_Health</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Supplier_Performance</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Supplier_Performance]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Supplier_Performance</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Expiry_Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Expiry_Status]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Expiry_Status</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stock_Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Stock_Status]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Stock_Status</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Inventory_Value_Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Inventory_Value_Category]</local-name>
+            <parent-name>[final_inventory.csv]</parent-name>
+            <remote-alias>Inventory_Value_Category</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='ABC Class' datatype='string' name='[ABC_Class]' role='dimension' type='nominal' />
+      <column caption='Audit Date' datatype='date' name='[Audit_Date]' role='dimension' type='ordinal' />
+      <column caption='Audit Variance Pct' datatype='real' name='[Audit_Variance_Pct]' role='measure' type='quantitative' />
+      <column caption='Available Stock' datatype='integer' name='[Available_Stock]' role='measure' type='quantitative' />
+      <column caption='Avg Daily Sales' datatype='string' name='[Avg_Daily_Sales]' role='dimension' type='nominal' />
+      <column caption='Batch ID' datatype='string' name='[Batch_ID]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+      <column caption='Count Variance' datatype='integer' name='[Count_Variance]' role='measure' type='quantitative' />
+      <column caption='Damaged Qty' datatype='integer' name='[Damaged_Qty]' role='measure' type='quantitative' />
+      <column caption='Days of Inventory' datatype='string' name='[Days_of_Inventory]' role='dimension' type='nominal' />
+      <column caption='Days to Expiry' datatype='integer' name='[Days_to_Expiry]' role='measure' type='quantitative' />
+      <column caption='Demand Forecast Accuracy Pct' datatype='real' name='[Demand_Forecast_Accuracy_Pct]' role='measure' type='quantitative' />
+      <column caption='Expiry Date' datatype='date' name='[Expiry_Date]' role='dimension' type='ordinal' />
+      <column caption='Expiry Risk' datatype='string' name='[Expiry_Risk]' role='dimension' type='nominal' />
+      <column caption='Expiry Status' datatype='string' name='[Expiry_Status]' role='dimension' type='nominal' />
+      <column caption='Fifo Fefo' datatype='string' name='[FIFO_FEFO]' role='dimension' type='nominal' />
+      <column caption='Forecast Next 30d' datatype='real' name='[Forecast_Next_30d]' role='measure' type='quantitative' />
+      <column caption='Inventory Health' datatype='string' name='[Inventory_Health]' role='dimension' type='nominal' />
+      <column caption='Inventory Status' datatype='string' name='[Inventory_Status]' role='dimension' type='nominal' />
+      <column caption='Inventory Value Category' datatype='string' name='[Inventory_Value_Category]' role='dimension' type='nominal' />
+      <column caption='Last Purchase Date' datatype='date' name='[Last_Purchase_Date]' role='dimension' type='ordinal' />
+      <column caption='Last Purchase Price USD' datatype='real' name='[Last_Purchase_Price_USD]' role='measure' type='quantitative' />
+      <column caption='Lead Time Days' datatype='integer' name='[Lead_Time_Days]' role='measure' type='quantitative' />
+      <column caption='Low Stock Flag' datatype='boolean' name='[Low_Stock_Flag]' role='dimension' type='nominal' />
+      <column caption='Order Frequency per month' datatype='string' name='[Order_Frequency_per_month]' role='dimension' type='nominal' />
+      <column caption='Quantity Committed' datatype='integer' name='[Quantity_Committed]' role='measure' type='quantitative' />
+      <column caption='Quantity On Hand' datatype='integer' name='[Quantity_On_Hand]' role='measure' type='quantitative' />
+      <column caption='Quantity Reserved' datatype='integer' name='[Quantity_Reserved]' role='measure' type='quantitative' />
+      <column caption='Received Date' datatype='date' name='[Received_Date]' role='dimension' type='ordinal' />
+      <column caption='Reorder Point' datatype='real' name='[Reorder_Point]' role='measure' type='quantitative' />
+      <column caption='Returns Qty' datatype='integer' name='[Returns_Qty]' role='measure' type='quantitative' />
+      <column caption='Risk Level' datatype='string' name='[Risk_Level]' role='dimension' type='nominal' />
+      <column caption='SKU Churn Rate' datatype='string' name='[SKU_Churn_Rate]' role='dimension' type='nominal' />
+      <column aggregation='CountD' caption='Sku Id' datatype='string' default-role='measure' default-type='quantitative' name='[SKU_ID]' role='dimension' type='nominal' />
+      <column caption='SKU Name' datatype='string' name='[SKU_Name]' role='dimension' type='nominal' />
+      <column caption='Safety Stock' datatype='integer' name='[Safety_Stock]' role='measure' type='quantitative' />
+      <column caption='Stock Age Days' datatype='integer' name='[Stock_Age_Days]' role='measure' type='quantitative' />
+      <column caption='Stock Status' datatype='string' name='[Stock_Status]' role='dimension' type='nominal' />
+      <column caption='Supplier ID' datatype='string' name='[Supplier_ID]' role='dimension' type='nominal' />
+      <column caption='Supplier Name' datatype='string' name='[Supplier_Name]' role='dimension' type='nominal' />
+      <column caption='Supplier OnTime Pct' datatype='real' name='[Supplier_OnTime_Pct]' role='measure' type='quantitative' />
+      <column caption='Supplier Performance' datatype='string' name='[Supplier_Performance]' role='dimension' type='nominal' />
+      <column caption='Supply Risk Score' datatype='integer' name='[Supply_Risk_Score]' role='measure' type='quantitative' />
+      <column caption='Total Inventory Value USD' datatype='real' name='[Total_Inventory_Value_USD]' role='measure' type='quantitative' />
+      <column caption='Unit Cost USD' datatype='real' name='[Unit_Cost_USD]' role='measure' type='quantitative' />
+      <column caption='Warehouse ID' datatype='string' name='[Warehouse_ID]' role='dimension' type='nominal' />
+      <column caption='Warehouse Location' datatype='string' name='[Warehouse_Location]' role='dimension' type='nominal' />
+      <column caption='final_inventory.csv' datatype='table' name='[__tableau_internal_object_id__].[final_inventory.csv_8470497D96F54A1B934A160B010FC063]' role='measure' type='quantitative' />
+      <group caption='Action (Category)' hidden='true' name='[Action (Category)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Category]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Risk Level)' hidden='true' name='[Action (Risk Level)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Risk_Level]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/j4/g1t51y750ngd42n45rgv8rwh0000gn/T/tableau-temp/#TableauTemp_1p8d2lb1ow59hp1d9z6qf0jq90fs.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/19/2026 12:38:08 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>SKU_ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SKU_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SKU_ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SKU_Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SKU_Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SKU_Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>900</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>2</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ABC_Class</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ABC_Class]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ABC_Class</remote-alias>
+              <ordinal>3</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Supplier_ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Supplier_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Supplier_ID</remote-alias>
+              <ordinal>4</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Supplier_Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Supplier_Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Supplier_Name</remote-alias>
+              <ordinal>5</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Warehouse_ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Warehouse_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Warehouse_ID</remote-alias>
+              <ordinal>6</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Warehouse_Location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Warehouse_Location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Warehouse_Location</remote-alias>
+              <ordinal>7</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Batch_ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Batch_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Batch_ID</remote-alias>
+              <ordinal>8</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>923</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Received_Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Received_Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Received_Date</remote-alias>
+              <ordinal>9</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>179</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last_Purchase_Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Last_Purchase_Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Last_Purchase_Date</remote-alias>
+              <ordinal>10</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>221</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Expiry_Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Expiry_Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Expiry_Date</remote-alias>
+              <ordinal>11</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>646</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Stock_Age_Days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Stock_Age_Days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Stock_Age_Days</remote-alias>
+              <ordinal>12</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>179</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity_On_Hand</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity_On_Hand]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quantity_On_Hand</remote-alias>
+              <ordinal>13</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>472</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity_Reserved</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity_Reserved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quantity_Reserved</remote-alias>
+              <ordinal>14</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>182</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity_Committed</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity_Committed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quantity_Committed</remote-alias>
+              <ordinal>15</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>152</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Damaged_Qty</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Damaged_Qty]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Damaged_Qty</remote-alias>
+              <ordinal>16</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Returns_Qty</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Returns_Qty]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Returns_Qty</remote-alias>
+              <ordinal>17</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg_Daily_Sales</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Avg_Daily_Sales]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg_Daily_Sales</remote-alias>
+              <ordinal>18</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>912</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Forecast_Next_30d</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Forecast_Next_30d]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Forecast_Next_30d</remote-alias>
+              <ordinal>19</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>774</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Days_of_Inventory</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Days_of_Inventory]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Days_of_Inventory</remote-alias>
+              <ordinal>20</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>698</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Reorder_Point</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Reorder_Point]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Reorder_Point</remote-alias>
+              <ordinal>21</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>374</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Safety_Stock</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Safety_Stock]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Safety_Stock</remote-alias>
+              <ordinal>22</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>198</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lead_Time_Days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Lead_Time_Days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lead_Time_Days</remote-alias>
+              <ordinal>23</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unit_Cost_USD</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Unit_Cost_USD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unit_Cost_USD</remote-alias>
+              <ordinal>24</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>700</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Last_Purchase_Price_USD</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Last_Purchase_Price_USD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Last_Purchase_Price_USD</remote-alias>
+              <ordinal>25</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>710</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total_Inventory_Value_USD</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Total_Inventory_Value_USD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total_Inventory_Value_USD</remote-alias>
+              <ordinal>26</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>996</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SKU_Churn_Rate</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SKU_Churn_Rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SKU_Churn_Rate</remote-alias>
+              <ordinal>27</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>425</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order_Frequency_per_month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Order_Frequency_per_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Order_Frequency_per_month</remote-alias>
+              <ordinal>28</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Supplier_OnTime_Pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Supplier_OnTime_Pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Supplier_OnTime_Pct</remote-alias>
+              <ordinal>29</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>848</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FIFO_FEFO</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[FIFO_FEFO]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FIFO_FEFO</remote-alias>
+              <ordinal>30</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Inventory_Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Inventory_Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Inventory_Status</remote-alias>
+              <ordinal>31</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Count_Variance</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Count_Variance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Count_Variance</remote-alias>
+              <ordinal>32</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Audit_Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Audit_Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Audit_Date</remote-alias>
+              <ordinal>33</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>91</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Audit_Variance_Pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Audit_Variance_Pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Audit_Variance_Pct</remote-alias>
+              <ordinal>34</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>787</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Demand_Forecast_Accuracy_Pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Demand_Forecast_Accuracy_Pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Demand_Forecast_Accuracy_Pct</remote-alias>
+              <ordinal>35</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>887</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Notes</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Notes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Notes</remote-alias>
+              <ordinal>36</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Available_Stock</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Available_Stock]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Available_Stock</remote-alias>
+              <ordinal>37</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>412</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Days_to_Expiry</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Days_to_Expiry]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Days_to_Expiry</remote-alias>
+              <ordinal>38</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>646</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Low_Stock_Flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[Low_Stock_Flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Low_Stock_Flag</remote-alias>
+              <ordinal>39</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Expiry_Risk</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Expiry_Risk]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Expiry_Risk</remote-alias>
+              <ordinal>40</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Supply_Risk_Score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Supply_Risk_Score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Supply_Risk_Score</remote-alias>
+              <ordinal>41</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Risk_Level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Risk_Level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Risk_Level</remote-alias>
+              <ordinal>42</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Inventory_Health</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Inventory_Health]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Inventory_Health</remote-alias>
+              <ordinal>43</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Supplier_Performance</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Supplier_Performance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Supplier_Performance</remote-alias>
+              <ordinal>44</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Expiry_Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Expiry_Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Expiry_Status</remote-alias>
+              <ordinal>45</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Stock_Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Stock_Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Stock_Status</remote-alias>
+              <ordinal>46</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Inventory_Value_Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Inventory_Value_Category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Inventory_Value_Category</remote-alias>
+              <ordinal>47</ordinal>
+              <family>final_inventory.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[final_inventory.csv_8470497D96F54A1B934A160B010FC063]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='final_inventory.csv' id='final_inventory.csv_8470497D96F54A1B934A160B010FC063'>
+            <properties context=''>
+              <relation connection='textscan.0ryndlc0z3i8dt17kmc0b0hd3otd' name='final_inventory.csv' table='[final_inventory#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='SKU_ID' ordinal='0' />
+                  <column datatype='string' name='SKU_Name' ordinal='1' />
+                  <column datatype='string' name='Category' ordinal='2' />
+                  <column datatype='string' name='ABC_Class' ordinal='3' />
+                  <column datatype='string' name='Supplier_ID' ordinal='4' />
+                  <column datatype='string' name='Supplier_Name' ordinal='5' />
+                  <column datatype='string' name='Warehouse_ID' ordinal='6' />
+                  <column datatype='string' name='Warehouse_Location' ordinal='7' />
+                  <column datatype='string' name='Batch_ID' ordinal='8' />
+                  <column datatype='date' name='Received_Date' ordinal='9' />
+                  <column datatype='date' name='Last_Purchase_Date' ordinal='10' />
+                  <column datatype='date' name='Expiry_Date' ordinal='11' />
+                  <column datatype='integer' name='Stock_Age_Days' ordinal='12' />
+                  <column datatype='integer' name='Quantity_On_Hand' ordinal='13' />
+                  <column datatype='integer' name='Quantity_Reserved' ordinal='14' />
+                  <column datatype='integer' name='Quantity_Committed' ordinal='15' />
+                  <column datatype='integer' name='Damaged_Qty' ordinal='16' />
+                  <column datatype='integer' name='Returns_Qty' ordinal='17' />
+                  <column datatype='string' name='Avg_Daily_Sales' ordinal='18' />
+                  <column datatype='real' name='Forecast_Next_30d' ordinal='19' />
+                  <column datatype='string' name='Days_of_Inventory' ordinal='20' />
+                  <column datatype='real' name='Reorder_Point' ordinal='21' />
+                  <column datatype='integer' name='Safety_Stock' ordinal='22' />
+                  <column datatype='integer' name='Lead_Time_Days' ordinal='23' />
+                  <column datatype='real' name='Unit_Cost_USD' ordinal='24' />
+                  <column datatype='real' name='Last_Purchase_Price_USD' ordinal='25' />
+                  <column datatype='real' name='Total_Inventory_Value_USD' ordinal='26' />
+                  <column datatype='string' name='SKU_Churn_Rate' ordinal='27' />
+                  <column datatype='string' name='Order_Frequency_per_month' ordinal='28' />
+                  <column datatype='real' name='Supplier_OnTime_Pct' ordinal='29' />
+                  <column datatype='string' name='FIFO_FEFO' ordinal='30' />
+                  <column datatype='string' name='Inventory_Status' ordinal='31' />
+                  <column datatype='integer' name='Count_Variance' ordinal='32' />
+                  <column datatype='date' name='Audit_Date' ordinal='33' />
+                  <column datatype='real' name='Audit_Variance_Pct' ordinal='34' />
+                  <column datatype='real' name='Demand_Forecast_Accuracy_Pct' ordinal='35' />
+                  <column datatype='string' name='Notes' ordinal='36' />
+                  <column datatype='integer' name='Available_Stock' ordinal='37' />
+                  <column datatype='integer' name='Days_to_Expiry' ordinal='38' />
+                  <column datatype='boolean' name='Low_Stock_Flag' ordinal='39' />
+                  <column datatype='string' name='Expiry_Risk' ordinal='40' />
+                  <column datatype='integer' name='Supply_Risk_Score' ordinal='41' />
+                  <column datatype='string' name='Risk_Level' ordinal='42' />
+                  <column datatype='string' name='Inventory_Health' ordinal='43' />
+                  <column datatype='string' name='Supplier_Performance' ordinal='44' />
+                  <column datatype='string' name='Expiry_Status' ordinal='45' />
+                  <column datatype='string' name='Stock_Status' ordinal='46' />
+                  <column datatype='string' name='Inventory_Value_Category' ordinal='47' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_716FC02B636A4D05A3BB751C91E63F07]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='PharmaSupply Guardian Dashboard' type='sheet' worksheet='Risk Level Distribution' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='PharmaSupply Guardian Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_DFE0340D853E46029134E917341E5A80]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='PharmaSupply Guardian Dashboard' type='sheet' worksheet='Products by Category' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='PharmaSupply Guardian Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_6A19160B0274465ABDBD87F34769FD93]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='PharmaSupply Guardian Dashboard' type='sheet' worksheet='Supplier Performance' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='PharmaSupply Guardian Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action4_FB6BC2DFFCAC42FDBC74045A0FFBD87A]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='PharmaSupply Guardian Dashboard' type='sheet' worksheet='Average Days to Expiry' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='PharmaSupply Guardian Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Average Days to Expiry'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_inventory' name='federated.0jew25b1nxghkk14nn0b513s5hsm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jew25b1nxghkk14nn0b513s5hsm'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Days to Expiry' datatype='integer' name='[Days_to_Expiry]' role='measure' type='quantitative' />
+            <column caption='Risk Level' datatype='string' name='[Risk_Level]' role='dimension' type='nominal' />
+            <column-instance column='[Days_to_Expiry]' derivation='Avg' name='[avg:Days_to_Expiry:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Category)]'>
+            <groupfilter function='member' level='[Category]' member='&quot;Fresh Produce&quot;' user:ui-action-filter='[Action2_DFE0340D853E46029134E917341E5A80]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Risk Level)]'>
+            <groupfilter function='level-members' level='[Risk_Level]' user:ui-action-filter='[Action1_716FC02B636A4D05A3BB751C91E63F07]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Risk Level)]</column>
+            <column>[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Category)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0jew25b1nxghkk14nn0b513s5hsm].[none:Category:nk]</rows>
+        <cols>[federated.0jew25b1nxghkk14nn0b513s5hsm].[avg:Days_to_Expiry:qk]</cols>
+      </table>
+      <simple-id uuid='{A4E0108C-2DB1-4D01-B930-7787F1505F95}' />
+    </worksheet>
+    <worksheet name='Products by Category'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_inventory' name='federated.0jew25b1nxghkk14nn0b513s5hsm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jew25b1nxghkk14nn0b513s5hsm'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Risk Level' datatype='string' name='[Risk_Level]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Sku Id' datatype='string' default-role='measure' default-type='quantitative' name='[SKU_ID]' role='dimension' type='nominal' />
+            <column-instance column='[SKU_ID]' derivation='CountD' name='[ctd:SKU_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Risk Level)]'>
+            <groupfilter function='level-members' level='[Risk_Level]' user:ui-action-filter='[Action1_716FC02B636A4D05A3BB751C91E63F07]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Risk Level)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0jew25b1nxghkk14nn0b513s5hsm].[none:Category:nk]</rows>
+        <cols>[federated.0jew25b1nxghkk14nn0b513s5hsm].[ctd:SKU_ID:qk]</cols>
+      </table>
+      <simple-id uuid='{EDE75B55-AED4-42FB-BC43-5EC705325F1C}' />
+    </worksheet>
+    <worksheet name='Risk Level Distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_inventory' name='federated.0jew25b1nxghkk14nn0b513s5hsm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jew25b1nxghkk14nn0b513s5hsm'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Risk Level' datatype='string' name='[Risk_Level]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Sku Id' datatype='string' default-role='measure' default-type='quantitative' name='[SKU_ID]' role='dimension' type='nominal' />
+            <column-instance column='[SKU_ID]' derivation='Count' name='[cnt:SKU_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Risk_Level]' derivation='None' name='[none:Risk_Level:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Category)]'>
+            <groupfilter function='member' level='[Category]' member='&quot;Fresh Produce&quot;' user:ui-action-filter='[Action2_DFE0340D853E46029134E917341E5A80]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0jew25b1nxghkk14nn0b513s5hsm].[none:Risk_Level:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Risk_Level:nk]' />
+              <groupfilter function='member' level='[none:Risk_Level:nk]' member='&quot;Medium&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0jew25b1nxghkk14nn0b513s5hsm].[none:Risk_Level:nk]</column>
+            <column>[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Category)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0jew25b1nxghkk14nn0b513s5hsm].[cnt:SKU_ID:qk]</rows>
+        <cols>[federated.0jew25b1nxghkk14nn0b513s5hsm].[none:Risk_Level:nk]</cols>
+      </table>
+      <simple-id uuid='{AC9E2DE8-F231-46AB-B277-184A76A3F78B}' />
+    </worksheet>
+    <worksheet name='Supplier Performance'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_inventory' name='federated.0jew25b1nxghkk14nn0b513s5hsm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jew25b1nxghkk14nn0b513s5hsm'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column caption='Risk Level' datatype='string' name='[Risk_Level]' role='dimension' type='nominal' />
+            <column aggregation='CountD' caption='Sku Id' datatype='string' default-role='measure' default-type='quantitative' name='[SKU_ID]' role='dimension' type='nominal' />
+            <column caption='Supplier Name' datatype='string' name='[Supplier_Name]' role='dimension' type='nominal' />
+            <column caption='Supplier Performance' datatype='string' name='[Supplier_Performance]' role='dimension' type='nominal' />
+            <column-instance column='[SKU_ID]' derivation='CountD' name='[ctd:SKU_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Supplier_Name]' derivation='None' name='[none:Supplier_Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Supplier_Performance]' derivation='None' name='[none:Supplier_Performance:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Category)]'>
+            <groupfilter function='member' level='[Category]' member='&quot;Fresh Produce&quot;' user:ui-action-filter='[Action2_DFE0340D853E46029134E917341E5A80]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Risk Level)]'>
+            <groupfilter function='level-members' level='[Risk_Level]' user:ui-action-filter='[Action1_716FC02B636A4D05A3BB751C91E63F07]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Risk Level)]</column>
+            <column>[federated.0jew25b1nxghkk14nn0b513s5hsm].[Action (Category)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0jew25b1nxghkk14nn0b513s5hsm].[none:Supplier_Performance:nk] / [federated.0jew25b1nxghkk14nn0b513s5hsm].[none:Supplier_Name:nk])</rows>
+        <cols>[federated.0jew25b1nxghkk14nn0b513s5hsm].[ctd:SKU_ID:qk]</cols>
+      </table>
+      <simple-id uuid='{DA6AF074-1525-4699-90CC-0371E2C60425}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='PharmaSupply Guardian Dashboard'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='33473' id='3' name='Risk Level Distribution' w='43050' x='635' y='20502'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='33473' id='5' name='Products by Category' w='55680' x='43685' y='20502'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='44909' id='6' name='Supplier Performance' w='43050' x='635' y='53975'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='44909' id='7' name='Average Days to Expiry' w='55680' x='43685' y='53975'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='19386' id='8' type-v2='text' w='98730' x='635' y='1116'>
+            <formatted-text>
+              <run bold='true' fontcolor='#000000' fontname='-webkit-standard' fontsize='22'>PharmaSupply Guardian</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#000000' fontname='-webkit-standard' fontsize='14'>Drug Shortage &amp; Expiry Risk Intelligence Dashboard</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1200' minheight='1200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97768' id='19' param='vert' type-v2='layout-flow' w='98730' x='635' y='1116'>
+                <zone h='19386' id='8' type-v2='text' w='98730' x='635' y='1116'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='-webkit-standard' fontsize='22'>PharmaSupply Guardian</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='-webkit-standard' fontsize='14'>Drug Shortage &amp; Expiry Risk Intelligence Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='260' h='33473' id='3' is-fixed='true' name='Risk Level Distribution' w='43050' x='635' y='20502'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='260' h='33473' id='5' is-fixed='true' name='Products by Category' w='55680' x='43685' y='20502'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44909' id='6' is-fixed='true' name='Supplier Performance' w='43050' x='635' y='53975'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44909' id='7' is-fixed='true' name='Average Days to Expiry' w='55680' x='43685' y='53975'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{8D401B59-4291-4343-82C8-1E5091AFE1CF}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Risk Level Distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{54AC75D2-6F25-498A-9CE4-8A4B9322A746}' />
+    </window>
+    <window class='worksheet' name='Products by Category'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1CCF41DB-5513-40A7-80B0-4617FD61B9E2}' />
+    </window>
+    <window class='worksheet' name='Supplier Performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BEB50A13-E5EC-4977-ACE7-9D490A36E7C1}' />
+    </window>
+    <window class='worksheet' name='Average Days to Expiry'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{67F1596D-F54B-4D24-865E-F846E34D8037}' />
+    </window>
+    <window class='dashboard' maximized='true' name='PharmaSupply Guardian Dashboard'>
+      <viewpoints>
+        <viewpoint name='Average Days to Expiry' />
+        <viewpoint name='Products by Category' />
+        <viewpoint name='Risk Level Distribution'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Supplier Performance' />
+      </viewpoints>
+      <active id='7' />
+      <simple-id uuid='{7D8B417F-693E-4CD9-88B0-40864E7F7F42}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='PharmaSupply Guardian Dashboard' width='384'>
+      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
+      P2WaXq8XkZGRyg/c19dXeHt7O11sx44dK4QQ4sSJE8LV1VUAon379mLAgAFCo9EIQDzxxBNC
+      CCG+/vprZb2goCAxZcoU8fXXX4v09HSnC+b8+fOVoFcdANLT04WLi4sAxPbt20VOTo4wGAzK
+      RTEoKEg0atSoRroWLlwoAKFSqYRGoxEtW7YU3t7eyrRNmzYJIZwDgMPhEPfee68ARIsWLYTF
+      YhEOh0OMGjVKAKJTp05O6RVCiN9//13Z95o1a2qcX4fDofwTQoi7775bAGL48OHKMkuXLlXS
+      5XA4REFBgXIBb9asmRg0aJASZAYNGiQcDod48803lf2q1WoRGhoqPvvsM3H69Gkln66urqJ1
+      69ZCr9cr57I6AIwbN04AolevXkIIITIyMoS7u7sARNu2bUVsbKxyE/DII48Ih8OhBHJAeHp6
+      ipYtWyrnpkmTJqKiouKKPwhJqkuuughICMHRo0c5ePAgH374IStWrACgffv2uLm5Kct5enoS
+      Hx9PcnIyU6ZMASA9PZ28vDwsFgutW7fm4YcfZuPGjaxevZrPP/8cgJycHDIzM532OWXKFI4f
+      P64UTwCoVCq+/PJLDh06xEMPPQSA0Whkx44dHDp0iF69egGQkpICVFV+jhkzhmnTprFz5042
+      bNjAyJEjAfjzzz8BGDFiBI888ggajYbs7Gw++OADxowZQ6tWrejXrx+pqalXe5icdOrUicOH
+      D3P48GGGDBkCwPr16ykqKnI6rq+//jpJSUns2rULX19fhBB88803NbanUqm4//77AUhLS+P0
+      6dNYLBbi4uKUfKhUKqd1zp07p/wdHBwMVBUlxcbG0q1bN7p370737t0ZNGjQRYvOLqakpIRB
+      gwYxYcIEEhISWLt2LVOnTgUgMTHRqXhKpVLx1VdfkZaWxkMPPcS6desoKSkB4IcffiAxMZGf
+      fvqpRrovVFhYyKhRo5g8eTJ//PEH69evZ/To0cD/ncdqLi4ubN26laSkJObMmQNUVfIXFBRc
+      Vf4kqa646gBgt9vp2rUr7du3Z+rUqVRUVODr68vrr7/u9ONt06YNrVu3RqPREBsbC1RdcMrL
+      y9HpdDz//PNERkbyyiuv0K1bNyZPnqysa7VanfY5btw4DAYDrq6uyjSNRkOfPn3QarV07NgR
+      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
+      4cH8+fNZuXIlTz31lDLWAFR1QeDq6opGo+Hxxx+nc+fObNiwgS5dulzxmO3bt4+4uDj69u3L
+      q6++ihACq9XK9u3bAdi1axc+Pj6X7KLgP//5D5s3b+aHH35QBkA5X4MGDejduzfz5s1j+/bt
+      7N27V5n3559/MmzYMPbu3cuwYcOUPvufffZZJk6cyAMPPFCjGOty1Go1JpMJnU5HeHg4Y8aM
+      YeXKlbz99tv079//kut16dKFrVu38scff5CYmKgMdtO0aVP69+/PypUrWbhwITExMTUCHFR1
+      6KfT6di9ezdQ1TBhxYoVBAUF8cQTT7By5Upee+01pa7kYgoLC3nmmWcYMWIEK1asYOTIkWzc
+      uJHx48cDVV1uREREsGPHDt577z3eeeedyx6LLVu2IITgxIkT5OTk0K9fPxISEjAajdhsNnbs
+      2IGvry8///wzW7Zs4dtvv3XqBbZaZGSk0qWGyWRSeoOVpH/CVT0BrFq1ioSEBOWOfvny5cod
+      bLU777yTWbNm0b17d4QQ6PV66tWrx/Lly3nttdf49NNP6datG8nJyco6ISEhxMTE0LFjR1q0
+      aMGxY8fo1auXU/8855s2bRpDhgyha9eu5OfnM3r0aFq1auW0TJcuXXjiiSfQ6aGuv84AACAA
+      SURBVHTcfffdDBs2TAkqt99+O3PnzmXatGncc8899OrVi4iICAIDA5k+fTq9evUiJCSEoqIi
+      Vq1apWxz6NChLF26lOjoaAICAjh27BgxMTFMmzaNtWvXKk1CbTYbnTt3Vu7mhg8fzvr163nj
+      jTfo3r07HTp0oG/fvmg0GpYvX86yZctIS0vj/fffv2QzSX9/f9q1a0dmZqZT3/4XCgwM5Kmn
+      nmLmzJnK8SsvL+exxx6jefPmnDp1ig8//JD169ej0+mYOnUqSUlJTJ48mc8//9xp/xempboX
+      2FatWnHkyBFGjhzJG2+8wbhx41iyZAkZGRnMnTvXqX//80VFRfHWW28xffp06tevT+/evYGq
+      YpB77rmHTZs2kZOTw6RJky7a7Fer1fLuu+8yduxYGjduTFZWFj/88APz589n0qRJREREcPr0
+      aT766COn9RwOBwMHDkSj0VBWVkb//v156623+PPPP5kwYQLbtm1T7sg1Gg1Tp04lODiYnJwc
+      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
+      qqqa9/XR0VE2b97Mjh07yMvL4969e8iyrIwbbN++XfnLLigo4Pr162RmZs4JJrm5uezbt4/3
+      338fvV7PxMQEmzdvxuFwoNPpsFgs+Hw+DAYDIyMjbN26lf7+/gV/JkEQHqZSqZQWPsxcfFUq
+      FQkJCRQWFiq9EIODg7jdbuWiff/xs8xmM7m5ucrj2XMVFxfzwQcf0NPTQ3Z2NmlpaZw6dYqE
+      hATS0tJITEzk7NmzeL1e9uzZQ0pKCrW1tWRnZ1NWVqZshhOP2W8fZ8VNA53t/7NYLMpzs901
+      s/3vgUAArVaLTqcjFosRCAQIBoOo1WouXbrESy+9RDgcVo4fHR3F7/dTWFiIWq1GkiT8fj9m
+      s5lwOEwwGFT+S0lJwWKxcPPmTaxWK0VFRYyPj+P1erFarSQlJcX1h/DWry7FfRaQmAa69Fbj
+      NFBZlolGo2i1WlQq1UPTKT8JSZKIRqNKwLj/XLIsK9/v7G/7/jUvj1r/sphpoG/80++e2iyg
+      +EwIf4ZUKtWciz/MNO3uH3y9fyxAo9FgNpsZHh7G4XCwfft2dDrdnAtFZmbmnPOp1WrMZjMw
+      c5eQkJAwp3UwOTlJLBajqKgIAJvNpnQtxVt6iom1eda4lJ1rM8elXGF1UqlUc/4dLyb4q9Xq
+      Oa2F+8+lUqkwGAxzjr9/wd/TXvz3zdf3E3lgfHWhVlwLQHg8r9f7yHGRpRAKhZRm9VITLYDV
+      1wJYziKRyCcaE5gdW33aVlwLQBAEYbn7JDcikiQRi8Weyc2LCACrzI3OYezj9+JSdiwWQ63W
+      EI8hEFmW+ezBsri1AARhORIB4BGe1hLvmQueelmN/rf2OuM2CBxvL+0uJT6dX4KwcLPrmp6F
+      FRcAZFnm5MmTWCwWEhISyMnJobu7m6mpKbKysjh06BCyLPPb3/5W6Qs/duzYnIu9x+Ohr6+P
+      rVu3PrYsl8tFKBQiLy/vka9fvnyZXbt2xa3vVRCETz+VSvXM8g2tyP0AjEYjzz//PAkJCaSm
+      pnLgwAHy8vI4dOgQMBMkzGYzzz33HHq9nsnJSTo6OqipqaG7u1tZ/efz+ejt7WV0dJQzZ85w
+      9+5dfD4ffX19XLp0iYSEBAwGA319fVy+fJnTp08TDocZHx/nzJkzdHV1AdDd3U11dbVYByAI
+      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
+      IYRwqJ/724C/8xKkMAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
